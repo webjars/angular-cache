@@ -11,10 +11,23 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>angular-cache</artifactId>
-    <version>3.0.1-beta.2-SNAPSHOT</version>
+    <version>3.0.0-beta.2-1-SNAPSHOT</version>
     <name>Angular-cache</name>
     <description>WebJar for Angular-cache</description>
     <url>http://webjars.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <upstream.version>3.0.0-beta.2</upstream.version>
+        <upstream.url>https://raw.github.com/jmdobry/angular-cache/${upstream.version}/dist</upstream.url>
+        <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destDir>
+        <requirejs>
+            {
+                "paths": { "angular-cache": "angular-cache" },
+                "shim": { "angular-cache": [ "angular" ] }
+            }
+        </requirejs>
+    </properties>
 
     <developers>
         <developer>
@@ -43,17 +56,10 @@
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>angularjs</artifactId>
-            <version>1.2.13</version>
+            <version>1.2.16-2</version>
         </dependency>
     </dependencies>
     
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>3.0.0-beta.2</upstream.version>
-        <upstream.url>https://raw.github.com/jmdobry/angular-cache/${upstream.version}/dist</upstream.url>
-        <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destDir>
-    </properties>
-
     <build>
         <plugins>
             <plugin>
@@ -91,14 +97,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.4.2</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.apache.maven.scm</groupId>
-                        <artifactId>maven-scm-provider-gitexe</artifactId>
-                        <version>1.9</version>
-                    </dependency>
-                </dependencies>
+                <version>2.5</version>
             </plugin>
 
             <plugin>
