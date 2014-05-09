@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>angular-cache</artifactId>
-    <version>3.0.0-beta.2-1-SNAPSHOT</version>
+    <version>3.0.0-beta.2-1</version>
     <name>Angular-cache</name>
     <description>WebJar for Angular-cache</description>
     <url>http://webjars.org</url>
@@ -49,7 +49,7 @@
         <url>http://github.com/webjars/angular-cache</url>
         <connection>scm:git:https://github.com/webjars/angular-cache.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/angular-cache.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>angular-cache-3.0.0-beta.2-1</tag>
     </scm>
     
     <dependencies>
